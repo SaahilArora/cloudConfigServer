@@ -2,19 +2,19 @@ server:
   port: 8888
   shutdown: graceful
   servlet:
-    context-path: /cloudConfigServer
+    context-path: /cloudproperty
 
 spring:
   cloud:
     config:
       server:
         git:
-          uri: https://github.com/SaahilArora/cloudConfigServer.git
+          uri: https://gitlab.com/arorasaahil1994/cloudproperty.git
           timeout: 10 # in seconds
           refresh-rate: 30 # in seconds
-          default-label: master # default git branch
+          default-label: main # default git branch
           repos:
-            cloudConfigServer-test:
-              pattern: "*cloudConfig-test*"
-              uri: https://github.com/SaahilArora/cloudConfigServer.git
+            cloudproperty-test:
+              pattern: "*cloudproperty-test*"
+              uri: https://gitlab.com/arorasaahil1994/cloudproperty.git
               searchPaths: test, test/*
